@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 280px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .container {
+      text-align: center;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .speed-display {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2196F3;
+      margin: 15px 0;
+      padding: 10px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .toggle-btn {
+      background: #2196F3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin: 10px 5px;
+      transition: background 0.3s ease;
+    }
+    .toggle-btn:hover {
+      background: #1976D2;
+    }
+    .config-section {
+      margin: 20px 0;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .config-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .speed-input-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+    .speed-label {
+      font-size: 12px;
+      color: #666;
+      min-width: 60px;
+    }
+    .speed-input {
+      width: 60px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 12px;
+    }
+    .speed-input:focus {
+      outline: none;
+      border-color: #2196F3;
+      box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+    }
+    .save-btn {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+    .save-btn:hover {
+      background: #45a049;
+    }
+    .shortcut {
+      font-size: 11px;
+      color: #666;
+      margin-top: 15px;
+      padding: 8px;
+      background: rgba(0,0,0,0.05);
+      border-radius: 4px;
+    }
+    .error {
+      color: #f44336;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">YouTube Speed Toggle</div>
+    
+    <div class="speed-display" id="currentSpeed">1.5x</div>
+    
+    <button class="toggle-btn" id="toggleBtn">Toggle Speed</button>
+    
+    <div class="config-section">
+      <div class="config-title">Configure Speeds</div>
+      
+      <div class="speed-input-group">
+        <span class="speed-label">Speed 1:</span>
+        <input type="number" class="speed-input" id="speed1" min="0.25" max="16" step="0.25" value="1.5">
+        <span style="font-size: 12px; color: #666;">x</span>
+      </div>
+      
+      <div class="speed-input-group">
+        <span class="speed-label">Speed 2:</span>
+        <input type="number" class="speed-input" id="speed2" min="0.25" max="16" step="0.25" value="2.0">
+        <span style="font-size: 12px; color: #666;">x</span>
+      </div>
+      
+      <div id="errorMessage" class="error" style="display: none;"></div>
+      
+      <button class="save-btn" id="saveBtn">Save Settings</button>
+    </div>
+    
+    <div class="shortcut">
+      Press 'S' on YouTube to toggle between speeds
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

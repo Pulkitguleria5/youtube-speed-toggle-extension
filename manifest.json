@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Speed Toggle",
+  "version": "1.0",
+  "description": "Toggle between 1.5x and 2.0x playback speed on YouTube with 'S' key or Ctrl+Shift+S. Speed persists across page refreshes.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "YouTube Speed Toggle - Press 'S' to toggle speed",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
+  
