@@ -1,6 +1,6 @@
 # YouTube Speed Toggle Extension
 
-A Chrome extension that allows you to quickly toggle between 1.5x and 2.0x playback speed on YouTube videos.
+A Chrome extension that allows you to quickly Toggle between any two custom speeds on YouTube videos.
 
 ## Features
 
@@ -25,7 +25,7 @@ A Chrome extension that allows you to quickly toggle between 1.5x and 2.0x playb
 1. Navigate to any YouTube video page
 2. Press 'S' to toggle between 1.5x and 2.0x speed
 3. Or click the extension icon in your toolbar to use the popup interface
-4. Your speed preference will be saved and applied to future videos
+4. You can change the speed and your preference will be saved and applied to future videos
 
 ## Files
 
